@@ -150,8 +150,8 @@ ios/*.xcworkspace/
 *.swn
 
 # Gradle
-.gradle/
-**/gradle-wrapper.jar
-**/gradlew
-**/gradlew.bat
-**/*.iml
+# .gradle/
+# **/gradle-wrapper.jar
+# **/gradlew
+# **/gradlew.bat
+# **/*.iml
