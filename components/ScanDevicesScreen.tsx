@@ -147,7 +147,7 @@ const ScanDevicesScreen = () => {
   };
 
   const handleDiscoverPeripheral = (peripheral: Peripheral) => {
-    console.debug('[handleDiscoverPeripheral] new BLE peripheral=', peripheral);
+    // console.debug('[handleDiscoverPeripheral] new BLE peripheral=', peripheral);
     if (!peripheral.name) {
       peripheral.name = 'NO NAME';
     }
@@ -344,10 +344,10 @@ const ScanDevicesScreen = () => {
         'BleManagerDisconnectPeripheral',
         handleDisconnectedPeripheral,
       ),
-      bleManagerEmitter.addListener(
-        'BleManagerDidUpdateValueForCharacteristic',
-        handleUpdateValueForCharacteristic,
-      ),
+      // bleManagerEmitter.addListener(
+      //   'BleManagerDidUpdateValueForCharacteristic',
+      //   handleUpdateValueForCharacteristic,
+      // ),
       bleManagerEmitter.addListener(
         'BleManagerConnectPeripheral',
         handleConnectPeripheral,
@@ -409,7 +409,7 @@ const ScanDevicesScreen = () => {
   };
 
   const renderItem = ({item}: {item: Peripheral}) => {
-    const backgroundColor = item.connected ? '#069400' : Colors.white;
+    const backgroundColor = item.connected ? '#069400' : Colors.black;
     return (
       <TouchableHighlight
         underlayColor="#0082FC"
@@ -527,6 +527,7 @@ const styles = StyleSheet.create({
     margin: 10,
     borderRadius: 12,
     flex: 1,
+    color:"black",
     ...boxShadow,
   },
   scanButtonText: {
@@ -568,6 +569,8 @@ const styles = StyleSheet.create({
     fontSize: 16,
     textAlign: 'center',
     padding: 10,
+    
+
   },
   rssi: {
     fontSize: 12,
