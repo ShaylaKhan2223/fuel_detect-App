@@ -196,3 +196,8 @@ const styles = StyleSheet.create({
 });
 
 export default PeripheralDetailsScreen;
+
+
+// npx react-native run-android    ---- for android
+// npx react-native run-ios    ---- for apple
+
