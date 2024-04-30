@@ -114,7 +114,7 @@ const App = () => {
       <Stack.Navigator>
         <Stack.Screen name="ScanDevices" component={ScanDevicesScreen} />
         <Stack.Screen
-          name="PeripheralDetails"
+          name="Agrifuel Tracker"
           component={PeripheralDetailsScreen}
         />
       </Stack.Navigator>

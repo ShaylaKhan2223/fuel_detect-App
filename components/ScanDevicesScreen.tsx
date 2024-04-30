@@ -30,7 +30,7 @@ import BleManager, {
   Peripheral,
 } from 'react-native-ble-manager';
 
-const SECONDS_TO_SCAN_FOR = 30;
+const SECONDS_TO_SCAN_FOR =10;
 const SERVICE_UUIDS: string[] = [];
 const ALLOW_DUPLICATES = true;
 
@@ -306,7 +306,7 @@ const ScanDevicesScreen = () => {
           return map;
         });
 
-        navigation.navigate('PeripheralDetails', {
+        navigation.navigate('Agrifuel Tracker', {
           peripheralData: peripheralData,
         });
       }
